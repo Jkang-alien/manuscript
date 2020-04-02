@@ -3,7 +3,7 @@ title: Title of submission to PLOS journal
 author:
   - name: Jun Kang
     email: jkang.alien@gmail.com
-    affiliation: 3Department of Hospital Pathology, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, South Korea
+    affiliation: Department of Hospital Pathology, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, South Korea
     corresponding: jkang.alien@gmail.com
 
 abstract: |
