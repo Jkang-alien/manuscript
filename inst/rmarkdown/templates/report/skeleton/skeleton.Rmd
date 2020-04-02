@@ -14,11 +14,16 @@ output: rticles::plos_article
 csl: plos.csl
 ---
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+knitr::read_chunk('../data.R')
+```
+
 # Introduction
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-
-A list
 
 - Brevity
 - Logic and clarity
@@ -48,7 +53,5 @@ Comparison with other studies where inconsistencies are discussed
 
 Conclusions comments on possible biological or clinical implications and suggestions for further research.  
 Evaluate the results - not the authors
-
-
 
 # References {#references .unnumbered}
