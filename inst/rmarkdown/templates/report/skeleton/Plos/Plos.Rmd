@@ -1,0 +1,54 @@
+---
+title: Title of submission to PLOS journal
+author:
+  - name: Jun Kang
+    email: jkang.alien@gmail.com
+    affiliation: 3Department of Hospital Pathology, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, South Korea
+    corresponding: jkang.alien@gmail.com
+
+abstract: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+  
+bibliography: mybibfile.bib
+output: rticles::plos_article
+csl: plos.csl
+---
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+
+A list
+
+- Brevity
+- Logic and clarity
+- Clean typing
+
+The problem  
+
+The proposed solution  
+
+Here are two sample references: @Feynman1963118 [@Dirac1953888].
+
+# Materials and Methods
+
+# Results
+
+# Discussion
+
+Main message answers the question and main supporting evidence    
+
+Critical assessment opinions on 
+- any shortcomings in study design  
+- limitations in methods
+- flaws in analysis
+- validity of assumption 
+
+Comparison with other studies where inconsistencies are discussed  
+
+Conclusions comments on possible biological or clinical implications and suggestions for further research.  
+Evaluate the results - not the authors
+
+
+
+# References {#references .unnumbered}
