@@ -1,15 +1,24 @@
 ---
-title: Title of submission to PLOS journal
+title: Identify the report as introducing a predictive model
 author:
   - name: Jun Kang
     email: jkang.alien@gmail.com
     affiliation: Department of Hospital Pathology, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, South Korea
     corresponding: jkang.alien@gmail.com
+address:
+  - code: Department of Hospital Pathology, Seoul St. Mary’s Hospital
+    address: Department of Hospital Pathology, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Seoul, South Korea
 
 abstract: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+  Background
+  Objectives
+  Data sources
+  Performance metrics of the predictive model or models, in both point estimates and confidence
+  intervals
+  Conclusion including the practical value of the developed predictive model or models
   
-bibliography: mybibfile.bib
+bibliography: [mybibfile.bib]
+indent: true
 output: rticles::plos_article
 csl: plos.csl
 ---
@@ -33,12 +42,67 @@ The problem
 
 The proposed solution  
 
+
+- Rationale
+  + Identify the clinical goal
+  + Review the current practice and prediction accuracy of any existing models
+
+- Objectives
+   + State the nature of study being predictive modeling, defining the target of prediction
+   +Identify how the prediction problem may benefit the clinical goal
+
 Here are two sample references: @Feynman1963118 [@Dirac1953888].
 
 # Materials and Methods
 
-# Results
+- Describe the setting
+  +Identify the clinical setting for the target predictive model.
+  + Identify the modeling context in terms of facility type, size, volume, and duration of available data.
 
+- Define the prediction problem
+  + Define a measurement for the prediction goal (per patient or per hospitalization or per type of outcome).
+  + Determine that the study is retrospective or prospective.a
+  + Identify the problem to be prognostic or diagnostic.
+  + Determine the form of the prediction model: (1) classification if the target variable is categorical, (2) regression if the target variable is continuous, (3) survival prediction if the target variable is the
+time to an event.
+  + Translate survival prediction into a regression problem, with the target measured over a temporal window following the time of prediction.
+  + Explain practical costs of prediction errors (eg, implications of underdiagnosis or overdiagnosis).
+  + Defining quality metrics for prediction models.b
+  + Define the success criteria for prediction (eg, based on metrics in internal validation or external validation in the context of the clinical problem).
+
+- Prepare data for model building
+  + Identify relevant data sources and quote the ethics approval number for data access.
+  + State the inclusion and exclusion criteria for data.
+  + Describe the time span of data and the sample or cohort size.
+  + Define the observational units on which the response variable and predictor variables are defined.
+  + Define the predictor variables. Extra caution is needed to prevent information leakage from the response variable to predictor variables
+  + Describe the data preprocessing performed, including data cleaning and transformation. Remove outliers with impossible or extreme responses; state any criteria used for outlier removal.
+  + State how missing values were handled.
+  + Describe the basic statistics of the dataset, particularly of the response variable. These include the ratio of positive to negative classes for a classification problem and the distribution of the response variable for regression problem.
+  + Define the model validation strategies. Internal validation is the minimum requirement; external validation should also be performed whenever possible.
+Specify the internal validation strategy. Common methods include random split, time-based split, and patient-based split.
+  + Define the validation metrics. For regression problems, the normalized root-mean-square error should be used. For classification problems, the metrics should include sensitivity, specificity, posItive predictive value, negative predictive value, area under the ROCd curve, and calibration plot.
+  + For retrospective studies, split the data into a derivation set and a validation set. For prospective studies, define the starting time for validation data collection.
+
+
+- Build the predictive model
+  + Identify independent variables that predominantly take a single value (eg, being zero 99% of the time).
+  + Identify and remove redundant independent variables.
+  + Identify the independent variables that may suffer from the perfect separation problem
+  + Report the number of independent variables, the number of positive examples, and the number of negative examples.
+  + Assess whether sufficient data are available for a good fit of the model. In particular, for classification, there should be a sufficient number of observations in both positive and negative classes.
+  + Determine a set of candidate modeling techniques (eg, logistic regression, random forest, or deep learning). If only one type of model was used, justify the decision for using that model.
+  + Define the performance metrics to select the best model.
+  + Specify the model selection strategy. Common methods include K-fold validation or bootstrap to estimate the lost function on a grid of candidate parameter values. For K-fold validation, proper stratification by the response variable is needed.
+  + For model selection, include discussion on (1) balance between model accuracy and model simplicity or interpretability, and (2) the familiarity with the modeling techniques of the end user.
+
+# Results
+- Report the final model and performance
+  + Report the predictive performance of the final model in terms of the validation metrics specified in the methods section.
+  + If possible, report the parameter estimates in the model and their confidence intervals. When the direct calculation of confidence intervals is not possible, report nonparametric estimates from bootstrap samples.
+  + Comparison with other models in the literature should be based on confidence intervals.
+  + Interpretation of the final model. If possible, report what variables were shown to be predictive of the response variable. State which subpopulation has the best prediction and which subpopulation is most difficult to predict.
+  
 # Discussion
 
 Main message answers the question and main supporting evidence    
@@ -53,5 +117,23 @@ Comparison with other studies where inconsistencies are discussed
 
 Conclusions comments on possible biological or clinical implications and suggestions for further research.  
 Evaluate the results - not the authors
+
+- Clinical implications
+  + Report the clinical implications derived from the obtained predictive performance. For example, report the dollar amount that could be saved with better prediction. How many patients could benefit from a care model leveraging the model prediction? And to what extent?
+
+- Limitations of the model
+  + Assumed input and output data format
+  + Potential pitfalls in interpreting the model
+  + Potential bias of the data used in modeling
+  + Generalizability of the data
+  
+# Figure legends
+
+- Title which states the topic of the figure
+- Message which explains the contents of the figure
+
+# Supporting information
+
+- S1 Appendix. 
 
 # References {#references .unnumbered}
