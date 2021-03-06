@@ -8,3 +8,13 @@ Description: rmarkdown templete
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+    magick,
+    rsvg,
+    pagedown
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat

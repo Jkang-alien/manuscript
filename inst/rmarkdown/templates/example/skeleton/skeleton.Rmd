@@ -1,10 +1,18 @@
 ---
-title: "Example"
+title: "Title of the report"
+author: "Jun Kang"
 output: 
-  html_document:
-    css: styles.css
+  manuscript::paged_cmc:
+    logo_to_white: TRUE
+knit: pagedown::chrome_print
+main-color: "#003594"
+secondary-color: "87674F"
+google-font: TRUE
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# First section {1}
+
