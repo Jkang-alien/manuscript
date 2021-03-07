@@ -2,7 +2,7 @@
 % Please edit documentation in R/paged_cmc.R
 \name{paged_cmc}
 \alias{paged_cmc}
-\title{Function for windmill template}
+\title{Function for cmc template}
 \usage{
 paged_cmc(
   logo = "0",
@@ -30,5 +30,5 @@ paged_cmc(
 A pagedown template
 }
 \description{
-Function for windmill template
+Function for cmc template
 }
